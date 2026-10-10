@@ -30,12 +30,12 @@ const quickLinks = [
 ];
 
 const services = [
-  "Full-Stack Web Development",
-  "Frontend / UI Development",
-  "Backend / REST APIs",
-  "Portfolio Websites",
-  "E-Commerce Solutions",
-  "Graphic Design & Video Editing",
+  "3D Modeling & Hard-Surface Assets",
+  "Texturing, Shading & Materials",
+  "Lighting & Scene Composition",
+  "Rendering & Look Development",
+  "Motion Graphics (After Effects)",
+  "AI Video & Content Creation",
 ];
 
 const GithubIcon = ({ className = "" }) => (
@@ -62,7 +62,7 @@ const socials = [
   { label: "GitHub", href: "https://github.com", icon: GithubIcon },
   { label: "LinkedIn", href: "https://linkedin.com", icon: LinkedinIcon },
   { label: "Instagram", href: "https://instagram.com", icon: InstagramIcon },
-  { label: "Email", href: "mailto:irshadshaikh.dev@gmail.com", icon: Mail },
+  { label: "Email", href: "mailto:ashfaquealishaikh7890@gmail.com", icon: Mail },
 ];
 
 const TapeStrip = ({ className = "" }) => (
@@ -124,7 +124,7 @@ export default function Footer() {
 
       {/* Giant background watermark word */}
       <div className="pointer-events-none select-none absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-[16vw] lg:text-[11rem] leading-none font-['Oswald',sans-serif] font-black uppercase text-white/[0.04] tracking-tighter">
-        DEVELOPER
+        ANIMATOR
       </div>
 
       {/* ============ TOP CONTENT ============ */}
@@ -153,8 +153,8 @@ export default function Footer() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="font-['Caveat',cursive] text-amber-300 text-3xl sm:text-4xl font-bold rotate-[-2deg]"
           >
-            Let&apos;s build something{" "}
-            <span className="underline decoration-[#1d63fe] decoration-[3px]">amazing</span> together
+            Let&apos;s create something{" "}
+            <span className="underline decoration-[#1d63fe] decoration-[3px]">extraordinary</span> in 3D
           </motion.p>
         </div>
 
@@ -175,19 +175,19 @@ export default function Footer() {
               </span>
               <span className="flex flex-col leading-none">
                 <span className="text-white text-2xl font-black tracking-tight font-['Oswald',sans-serif] uppercase">
-                  Irshad<span className="text-[#1d63fe]">.Shaikh</span>
+                  Ashfaque<span className="text-[#1d63fe]">.Shaikh</span>
                 </span>
                 <span className="font-['Caveat',cursive] text-amber-300 text-base font-bold rotate-[-3deg]">
-                  full stack developer
+                  3D Animator
                 </span>
               </span>
               <TapeStrip className="absolute -top-3 -right-2 rotate-[24deg] opacity-60" />
             </Link>
 
             <p className="mt-5 text-sm leading-relaxed text-slate-400 max-w-sm">
-              Passionate web developer turning ideas into fast, responsive, and
-              user-friendly digital experiences — from clean frontends to solid
-              backends and the design that ties it all together.
+              Passionate 3D Animator creating realistic models, textures, and 
+              renders using Autodesk Maya — turning creative ideas into 
+              high-quality 3D assets and cinematic visual experiences.
             </p>
 
             {/* Social buttons */}
@@ -284,19 +284,19 @@ export default function Footer() {
 
             <ul className="space-y-4">
               <li>
-                <a href="mailto:irshadshaikh.dev@gmail.com" className="group flex items-center gap-3 text-sm font-semibold text-slate-400 hover:text-amber-300 transition-colors">
+                <a href="mailto:ashfaque.shaikh.dev@gmail.com" className="group flex items-center gap-3 text-sm font-semibold text-slate-400 hover:text-amber-300 transition-colors">
                   <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-amber-300 group-hover:text-[#0b1329] transition-colors">
                     <Mail className="w-4 h-4" />
                   </span>
-                  irshadshaikh.dev@gmail.com
+                  ashfaque.shaikh.dev@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+910000000000" className="group flex items-center gap-3 text-sm font-semibold text-slate-400 hover:text-amber-300 transition-colors">
+                <a href="tel:+919876543210" className="group flex items-center gap-3 text-sm font-semibold text-slate-400 hover:text-amber-300 transition-colors">
                   <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-amber-300 group-hover:text-[#0b1329] transition-colors">
                     <Phone className="w-4 h-4" />
                   </span>
-                  +91 00000 00000
+                  +91 7208117478
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm font-semibold text-slate-400">
@@ -322,15 +322,15 @@ export default function Footer() {
         {/* ============ BOTTOM BAR ============ */}
         <div className="relative flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
           <p className="flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-wide">
-            © {year} Irshad Shaikh. All rights reserved.
+            © {year} Ashfaque Shaikh. All rights reserved.
           </p>
 
-          <p className="flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-wide">
+          {/* <p className="flex items-center gap-1.5 text-xs font-bold text-slate-500 uppercase tracking-wide">
             Built with
             <Code2 className="w-3.5 h-3.5 text-[#1d63fe]" />
             <Heart className="w-3.5 h-3.5 text-[#c81e1e] fill-[#c81e1e]" />
             using Next.js &amp; Tailwind
-          </p>
+          </p> */}
 
           <button
             onClick={scrollTop}

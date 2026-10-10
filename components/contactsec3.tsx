@@ -31,15 +31,15 @@ const quick = [
   {
     icon: Mail,
     title: "Prefer Email?",
-    value: "irshadshaikh.dev@gmail.com",
-    href: "mailto:irshadshaikh.dev@gmail.com",
+    value: "ashfaquealishaikh7890@gmail.com",
+    href: "mailto:ashfaquealishaikh7890 @gmail.com",
     color: "#1d63fe",
   },
   {
     icon: Phone,
     title: "Prefer a Call?",
-    value: "+91 00000 00000",
-    href: "tel:+910000000000",
+    value: "+91 7208117478",
+    // href: "tel:+917208117478",
     color: "#16a34a",
   },
   {

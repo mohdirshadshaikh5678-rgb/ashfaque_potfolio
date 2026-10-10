@@ -102,7 +102,7 @@ export default function ContactSec1() {
           animate="visible"
           className="mt-8 flex flex-wrap justify-center gap-3"
         >
-          {["📞 +91 00000 00000", "📧 irshadshaikh.dev@gmail.com", "📍 Maharashtra, India"].map((chip) => (
+          {["📞 +91 7208117478", "📧 ashfaquealishaikh7890@gmail.com", "📍 Maharashtra, India"].map((chip) => (
             <span
               key={chip}
               className="text-sm font-bold px-4 py-2 rounded-full bg-white border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)]"

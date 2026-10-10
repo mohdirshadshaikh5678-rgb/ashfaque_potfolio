@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Irshad Shaikh | Web Developer Portfolio",
+  title: "Ashfaque Shaikh | 3D Artist & Animator Portfolio",
   description:
-    "Portfolio of Irshad Shaikh — Full-Stack MERN developer, freelance graphic designer & video editor.",
+    "Portfolio of Ashfaque Shaikh — 3D Artist, Animator, Graphic Designer & Video Editor.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
