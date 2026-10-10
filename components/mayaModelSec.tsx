@@ -173,12 +173,13 @@ function DarkLayout({ onOpen }: { onOpen: (g: Group) => void }) {
       </div>
 
       <div className="overflow-x-auto pb-4" style={{ scrollbarWidth: "thin", scrollbarColor: "#1d63fe #1e2a4a" }}>
-        <div className="flex gap-5 w-max px-2">
+        <div className="flex gap-4 px-4 sm:px-8" style={{ width: "max-content" }}>
           {groups.map((group) => (
             <button
               key={group.name}
               onClick={() => onOpen(group)}
-              className="relative flex-shrink-0 w-56 sm:w-64 h-44 sm:h-52 rounded-2xl overflow-hidden border-2 border-slate-700 hover:border-[#1d63fe] transition-all group shadow-lg"
+              className="relative flex-shrink-0 rounded-2xl overflow-hidden border-2 border-slate-700 hover:border-[#1d63fe] transition-all group shadow-lg"
+              style={{ width: "calc((100vw - 4rem - 2 * 1rem) / 3)", height: "calc((100vw - 4rem - 2 * 1rem) / 3 * 0.72)" }}
             >
               <img
                 src={group.images[0]}
