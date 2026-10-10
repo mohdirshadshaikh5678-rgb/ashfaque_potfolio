@@ -124,7 +124,7 @@ export default function Footer() {
 
       {/* Giant background watermark word */}
       <div className="pointer-events-none select-none absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-[16vw] lg:text-[11rem] leading-none font-['Oswald',sans-serif] font-black uppercase text-white/[0.04] tracking-tighter">
-        ANIMATOR
+        modeling 
       </div>
 
       {/* ============ TOP CONTENT ============ */}
@@ -178,14 +178,14 @@ export default function Footer() {
                   Ashfaque<span className="text-[#1d63fe]">.Shaikh</span>
                 </span>
                 <span className="font-['Caveat',cursive] text-amber-300 text-base font-bold rotate-[-3deg]">
-                  3D Animator
+                  3D modeling 
                 </span>
               </span>
               <TapeStrip className="absolute -top-3 -right-2 rotate-[24deg] opacity-60" />
             </Link>
 
             <p className="mt-5 text-sm leading-relaxed text-slate-400 max-w-sm">
-              Passionate 3D Animator creating realistic models, textures, and 
+              Passionate 3D modeling  creating realistic models, textures, and 
               renders using Autodesk Maya — turning creative ideas into 
               high-quality 3D assets and cinematic visual experiences.
             </p>

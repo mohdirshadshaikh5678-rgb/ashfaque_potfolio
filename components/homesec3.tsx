@@ -626,7 +626,7 @@
 //               },
 //               {
 //                 name: "TEKUNIK",
-//                 role: "3D Animator / Artist",
+//                 role: "3D modeling  / Artist",
 //                 desc: [
 //                   "Modeled, textured, and lit hard-surface and organic assets in Autodesk Maya.",
 //                   "Created presentation-ready renders with proper composition and lighting.",
@@ -899,7 +899,7 @@ export function HomeSec3() {
   const experience = [
     {
       name: "SUNITA PRODUCTION",
-      role: "3D Animator / Artist",
+      role: "3D modeling  / Artist",
       desc: [
         "Created detailed 3D hard-surface and organic models optimized for animation and clean topology.",
         "Applied accurate UV mapping, custom materials, and photorealistic textures in Autodesk Maya & Substance Painter.",
@@ -1020,7 +1020,7 @@ export function HomeSec3() {
             >
               <img 
                 src={typeof irshadImg === 'string' ? irshadImg : irshadImg.src} 
-                alt="Ashfaque Shaikh - Sunita Production 3D Animator" 
+                alt="Ashfaque Shaikh - Sunita Production 3D modeling " 
                 className="h-[340px] sm:h-[440px] lg:h-[560px] xl:h-[620px] w-auto max-w-none object-contain object-bottom block align-bottom drop-shadow-2xl"
               />
             </motion.div>

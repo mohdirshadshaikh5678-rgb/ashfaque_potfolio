@@ -105,7 +105,7 @@ export default function AboutSec1() {
           animate="visible"
           className="mt-4 max-w-2xl text-slate-700 text-base sm:text-lg leading-relaxed font-medium"
         >
-          I&apos;m a skilled 3D Animator specializing in 3D Modeling, Texturing, Lighting, and Rendering using Autodesk Maya. 
+          I&apos;m a skilled 3D modeling  specializing in 3D Modeling, Texturing, Lighting, and Rendering using Autodesk Maya. 
           I create realistic, production-ready 3D assets, props, and scenes with clean topology, accurate materials, and cinematic lighting.
         </motion.p>
 

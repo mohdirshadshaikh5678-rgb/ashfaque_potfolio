@@ -967,26 +967,26 @@ export function HomeSec1() {
           <h1 className="text-[14vw] sm:text-[13vw] lg:text-[10.5rem] leading-[0.85] font-black tracking-tighter text-[#0b1329] font-['Oswald',sans-serif] uppercase flex justify-center items-center flex-wrap gap-x-2 sm:gap-x-6">
             <span className="relative inline-block">
               3D
-              <motion.div 
+              {/* <motion.div 
                 {...floatAnim(5, 6)}
                 className="absolute -top-3 -right-2 sm:-top-6 sm:-right-6 bg-white border-2 border-slate-900 rounded-md p-1 sm:p-1.5 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] rotate-[-12deg] z-20"
               >
                 <TapeStrip className="absolute -top-3 left-1/2 -translate-x-1/2 rotate-[-6deg] w-10 sm:w-12 h-4 sm:h-5" />
                 <span className="font-mono text-xs sm:text-base font-bold text-slate-900">MAYA</span>
-              </motion.div>
+              </motion.div> */}
             </span>
 
             <span className="relative inline-block">
-              ANIM
-              <span className="relative inline-block">A</span>
-              T
+              MOD
+              <span className="relative inline-block"></span>
+              ELI
               <span className="relative inline-block">
-                O
+                N
                 <span className="absolute -top-1 -right-1 pointer-events-none">
                   <SpiderWebSvg />
                 </span>
               </span>
-              R
+              G
             </span>
           </h1>
 
@@ -1063,7 +1063,7 @@ export function HomeSec1() {
               <h3 className="text-slate-900 font-black text-lg tracking-wide uppercase leading-tight font-['Oswald',sans-serif]">
                 CREATING <br />
                 REALISTIC 3D <br />
-                ASSETS
+                ASSETS & ENVIRONMENT
               </h3>
 
               <div className="absolute -bottom-2 -left-2 w-6 h-10 bg-amber-400 -z-10 rounded-xs" />
@@ -1080,7 +1080,7 @@ export function HomeSec1() {
             >
               <img 
                 src={typeof irshadImg === 'string' ? irshadImg : irshadImg.src} 
-                alt="Irshad - 3D Animator & Modeler" 
+                alt="Irshad - 3D modeling  & Modeler" 
                 className="h-[380px] sm:h-[440px] lg:h-[490px] w-auto max-w-none object-contain object-bottom drop-shadow-2xl"
               />
             </motion.div>
@@ -1110,8 +1110,8 @@ export function HomeSec1() {
                 </p>
                 <p className="flex items-center justify-center lg:justify-end gap-2 flex-wrap text-slate-700">
                   <span>Lighting</span> <span className="text-amber-500 font-black">•</span>
-                  <span>Render</span> <span className="text-amber-500 font-black">•</span>
-                  <span>Arnold / Cycles</span>
+                  <span>Arnold/Render</span> <span className="text-amber-500 font-black"></span>
+                  {/* <span>Arnold / Cycles</span> */}
                 </p>
               </div>
 
@@ -1131,11 +1131,11 @@ export function HomeSec1() {
               <div className="px-3 py-1.5 rounded-xl bg-white border-2 border-slate-800 shadow-md font-bold text-xs text-slate-800 flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-blue-500"></span> Maya
               </div>
-              <div className="px-3 py-1.5 rounded-xl bg-white border-2 border-slate-800 shadow-md font-bold text-xs text-slate-800 flex items-center gap-1.5">
+              {/* <div className="px-3 py-1.5 rounded-xl bg-white border-2 border-slate-800 shadow-md font-bold text-xs text-slate-800 flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-orange-500"></span> Blender
-              </div>
+              </div> */}
               <div className="px-3 py-1.5 rounded-xl bg-white border-2 border-slate-800 shadow-md font-bold text-xs text-slate-800 flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-red-500"></span> ZBrush
+                <span className="w-2 h-2 rounded-full bg-red-500"></span> AFTER EFFECT
               </div>
               <div className="px-3 py-1.5 rounded-xl bg-white border-2 border-slate-800 shadow-md font-bold text-xs text-slate-800 flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-amber-600"></span> Substance

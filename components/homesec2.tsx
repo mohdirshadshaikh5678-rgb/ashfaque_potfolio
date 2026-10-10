@@ -533,10 +533,10 @@
 //               ASHFAQUE <span className="text-[#1d63fe]">SHAIKH</span>
 //             </h1>
 
-//             {/* Cursive "3D Animator" Label next to title */}
+//             {/* Cursive "3D modeling " Label next to title */}
 //             <div className="relative inline-flex flex-col items-center -mt-8 sm:-mt-12 ml-2 sm:ml-4">
 //               <span className="font-['Caveat',cursive] text-2xl sm:text-3xl font-bold text-blue-600 rotate-[-5deg] tracking-wide whitespace-nowrap">
-//                 3D Animator
+//                 3D modeling 
 //               </span>
 //               <CursiveUnderline />
 //             </div>
@@ -550,7 +550,7 @@
 //             animate="visible"
 //             className="text-slate-600 font-bold text-base sm:text-lg tracking-wide mb-6"
 //           >
-//             3D Animator &nbsp;|&nbsp; 3D Modeling &nbsp;|&nbsp; Texturing, Lighting & Rendering (Autodesk Maya)
+//             3D modeling  &nbsp;|&nbsp; 3D Modeling &nbsp;|&nbsp; Texturing, Lighting & Rendering (Autodesk Maya)
 //           </motion.p>
 
 //           {/* Description Paragraph */}
@@ -561,7 +561,7 @@
 //             animate="visible"
 //             className="text-slate-700 text-base sm:text-lg leading-relaxed font-normal max-w-2xl mb-10"
 //           >
-//             I&apos;m Ashfaque Shaikh, a 3D Animator specializing in 3D modeling, texturing, lighting, and rendering using Autodesk Maya. 
+//             I&apos;m Ashfaque Shaikh, a 3D modeling  specializing in 3D modeling, texturing, lighting, and rendering using Autodesk Maya. 
 //             I create realistic, production-ready 3D assets and scenes with clean topology, accurate materials, and cinematic lighting to bring ideas to life.
 //           </motion.p>
 
@@ -770,7 +770,7 @@ export function HomeSec2() {
             >
               <img 
                 src={typeof irshadImg === 'string' ? irshadImg : irshadImg.src} 
-                alt="Ashfaque Shaikh - 3D Animator" 
+                alt="Ashfaque Shaikh - 3D modeling " 
                 className="h-[320px] sm:h-[420px] lg:h-[540px] w-auto max-w-none object-contain object-bottom drop-shadow-xl"
               />
             </motion.div>
@@ -811,10 +811,10 @@ export function HomeSec2() {
               ASHFAQUE <span className="text-[#1d63fe]">SHAIKH</span>
             </h1>
 
-            {/* Cursive "3D Animator" Badge next to title */}
+            {/* Cursive "3D modeling " Badge next to title */}
             <div className="inline-flex flex-col items-start sm:items-center mt-1 sm:mt-0">
               <span className="font-['Caveat',cursive] text-2xl sm:text-3xl font-bold text-blue-600 rotate-[-5deg] tracking-wide whitespace-nowrap">
-                3D Animator
+                3D modeling 
               </span>
               <CursiveUnderline />
             </div>
@@ -828,7 +828,7 @@ export function HomeSec2() {
             animate="visible"
             className="text-slate-600 font-bold text-sm sm:text-base lg:text-lg tracking-wide mb-4 sm:mb-6"
           >
-            3D Animator &nbsp;|&nbsp; 3D Modeling &nbsp;|&nbsp; Texturing, Lighting & Rendering (Autodesk Maya)
+            3D modeling  &nbsp;|&nbsp; 3D Modeling &nbsp;|&nbsp; Texturing, Lighting & Rendering (Autodesk Maya)
           </motion.p>
 
           {/* Description Paragraph */}
@@ -839,7 +839,7 @@ export function HomeSec2() {
             animate="visible"
             className="text-slate-700 text-sm sm:text-base lg:text-lg leading-relaxed font-normal max-w-2xl mb-8 sm:mb-10"
           >
-            I&apos;m Ashfaque Shaikh, a 3D Animator specializing in 3D modeling, texturing, lighting, and rendering using Autodesk Maya. 
+            I&apos;m Ashfaque Shaikh, a 3D modeling  specializing in 3D modeling, texturing, lighting, and rendering using Autodesk Maya. 
             I create realistic, production-ready 3D assets and scenes with clean topology, accurate materials, and cinematic lighting to bring ideas to life.
           </motion.p>
 

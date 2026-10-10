@@ -68,7 +68,7 @@ export default function Navbar() {
           <span className="absolute -inset-x-2 -inset-y-1 bg-amber-300 -rotate-1 transform -skew-x-2 rounded-[4px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
           <span className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#0b1329] border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)]">
-            <span className="font-mono text-[#fde047] font-black text-sm tracking-tight">&lt;/&gt;</span>
+            <span className="font-mono text-[#fde047] font-black text-sm tracking-tight">3D</span>
           </span>
 
             <span className="relative flex flex-col leading-none">
@@ -76,12 +76,12 @@ export default function Navbar() {
                 Ashfaque<span className="text-[#1d63fe]">.Shaikh</span>
               </span>
               <span className="font-['Caveat',cursive] text-[#1d63fe] text-sm font-bold rotate-[-3deg]">
-                3D animator
+                3D modeling 
               </span>
             </span>
 
           {/* Tape strip accent */}
-          <TapeStrip className="absolute -top-2.5 -right-6 rotate-[20deg] opacity-70" />
+          {/* <TapeStrip className="absolute -top-2.5 -right-6 rotate-[20deg] opacity-70" /> */}
         </Link>
 
         {/* ============ DESKTOP LINKS ============ */}
