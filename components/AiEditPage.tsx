@@ -165,7 +165,7 @@ function FinalVideo() {
 
         <video
           ref={ref}
-          src="/assest/aivid/_tv_ads_1080p_20260923125142.mp4"
+          src="/assest/aivid/Final (1) (1).mp4"
           className="w-full block"
           onTimeUpdate={onTimeUpdate}
           onEnded={() => setPlaying(false)}
