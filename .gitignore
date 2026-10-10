@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large video files (>100MB - exceeds GitHub limit)
+public/assest/aivid/Final.mp4
