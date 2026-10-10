@@ -1,17 +1,13 @@
 "use client";
-import React from "react";
-import { motion, type Variants, type TargetAndTransition } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import teknodeImg from '../public/assest/teknodewebimg.png';
-import vibgyorImg from '../public/assest/vibgyorventure.jpeg';
-import innercompassImg from '../public/assest/innercompass.jpeg';
-import horizonImg from '../public/assest/hiparks.jpeg';
+import React, { useState } from "react";
+import { motion, type Variants } from "framer-motion";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 if (typeof document !== "undefined" && !document.getElementById("google-fonts-projectssec3")) {
   const link = document.createElement("link");
   link.id = "google-fonts-projectssec3";
   link.rel = "stylesheet";
-  link.href = "https://fonts.googleapis.com/css2?family=Caveat:wght@600;700;800&family=Oswald:wght@700;800;900&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap";
+  link.href = "https://fonts.googleapis.com/css2?family=Caveat:wght@600;700;800&family=Oswald:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap";
   document.head.appendChild(link);
 }
 
@@ -24,138 +20,253 @@ const fadeInUp: Variants = {
   }),
 };
 
-const floatAnim = (duration = 5, yDistance = 8): { animate: TargetAndTransition } => ({
-  animate: {
-    y: [0, -yDistance, 0],
-    transition: { duration, repeat: Infinity, ease: "easeInOut" },
+type Group = { name: string; images: string[] };
+
+const groups: Group[] = [
+  {
+    name: "Game Environment",
+    images: [
+      "/assest/mayaimg/Game Environment 3D Modelling_ Texturing_ Lighting In Autodesk Maya _._._._.__3dmodelling _3dsculpting _3dwork _3dcharacter _3dmodel _3dartist _3dartwork _(.webp",
+      "/assest/mayaimg/Game Environment 3D Modelling_ Texturing_ Lighting In Autodesk Maya _._._._.__3dmodelling _3dsculpting _3dwork _3dcharacter _3dmodel _3dartist _3dartwork _1.webp",
+      "/assest/mayaimg/Game Environment 3D Modelling_ Texturing_ Lighting In Autodesk Maya _._._._.__3dmodelling _3dsculpting _3dwork _3dcharacter _3dmodel _3dartist _3dartwork _2.webp",
+    ],
   },
-});
+  {
+    name: "Ice Cream Cart",
+    images: [
+      "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinti_1.webp",
+      "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinti_2.webp",
+      "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprintin(.webp",
+    ],
+  },
+  {
+    name: "Kitchen",
+    images: [
+      "/assest/mayaimg/Kitchen 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _zbru(.webp",
+    ],
+  },
+  {
+    name: "Living Room",
+    images: [
+      "/assest/mayaimg/Living Room 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _(.webp",
+      "/assest/mayaimg/Living Room 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _1.webp",
+      "/assest/mayaimg/Living Room 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _2.webp",
+    ],
+  },
+  {
+    name: "Product Modelling",
+    images: [
+      "/assest/mayaimg/Product Modelling_ Texturing _ Lighting In Autodesk Maya _._._.__3dmodelling _3dsculpting _3dwork _3dcharacter _3dmodel _3dartist _3dartwork _zbrushsculpt (.webp",
+    ],
+  },
+  {
+    name: "School",
+    images: [
+      "/assest/mayaimg/School 3D Modeling _Texturing _lighting In Autodesk maya _._._._.__3dmodel _3dmodeling _3dart _3d _3ddesign _3dartist _3dprinter _3dprint _3dprinted _3dren(.webp",
+      "/assest/mayaimg/School 3D Modeling _Texturing _lighting In Autodesk maya _._._._.__3dmodel _3dmodeling _3dart _3d _3ddesign _3dartist _3dprinter _3dprint _3dprinted _3dre_1.webp",
+      "/assest/mayaimg/School 3D Modeling _Texturing _lighting In Autodesk maya _._._._.__3dmodel _3dmodeling _3dart _3d _3ddesign _3dartist _3dprinter _3dprint _3dprinted _3dre_2.webp",
+    ],
+  },
+  {
+    name: "Sword",
+    images: [
+      "/assest/mayaimg/Sword 3D Modeling In Autodesk Maya. _. _. _. _. _3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _zbrush (.webp",
+      "/assest/mayaimg/Sword 3D Modeling In Autodesk Maya. _. _. _. _. _3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _zbrush_2.webp",
+    ],
+  },
+];
 
 const TapeStrip = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 100 30" className={`w-14 h-5 fill-amber-300/85 drop-shadow-xs pointer-events-none ${className}`} preserveAspectRatio="none">
+  <svg viewBox="0 0 100 30" className={`fill-amber-300/85 drop-shadow-xs pointer-events-none ${className}`} preserveAspectRatio="none">
     <path d="M3,4 L97,2 L94,26 L6,28 Z" />
   </svg>
 );
 
-const projects = [
-  {
-    img: teknodeImg,
-    title: "Teknode E-Commerce",
-    tag: "E-Commerce",
-    desc: "A complete online store for Teknode with product catalog, cart, secure payments and a fast mobile-first storefront.",
-    color: "#1d63fe",
-    bg: "#e0ebff",
-    link: "https://deep.vibgyorventures.co.in/",
-  },
-  {
-    img: vibgyorImg,
-    title: "Vibgyor Ventures",
-    tag: "Corporate",
-    desc: "Premium corporate website for Vibgyor Ventures showcasing services, branding and a clean professional layout.",
-    color: "#16a34a",
-    bg: "#e0fbea",
-    link: "https://vibgyorventures.co.in/home",
-  },
-  {
-    img: innercompassImg,
-    title: "Inner Compass App",
-    tag: "Web App",
-    desc: "A modern live web application with a clean, responsive and user-friendly frontend built for the web.",
-    color: "#c81e1e",
-    bg: "#ffe4e4",
-    link: "https://innercompasslive.vercel.app/",
-  },
-  {
-    img: horizonImg,
-    title: "Horizon Industrial Parks",
-    tag: "Corporate",
-    desc: "Corporate platform for India&apos;s largest industrial & logistics park developer with portfolio and insights.",
-    color: "#f59e0b",
-    bg: "#fff4dd",
-    link: "https://www.hiparks.com/",
-  },
-];
-
 export default function ProjectsSec3() {
-  return (
-    <section id="projectssec3" className="relative w-full bg-[#f4f4f3] text-slate-900 overflow-hidden font-['Plus_Jakarta_Sans',sans-serif] px-6 py-20 lg:py-24 scroll-mt-16">
-      {/* paper grid */}
-      <div
-        className="absolute inset-0 opacity-[0.25] pointer-events-none z-0"
-        style={{ backgroundImage: `radial-gradient(#64748b 1px, transparent 1px)`, backgroundSize: "22px 22px" }}
-      />
-      <motion.div {...floatAnim(8, 12)} className="absolute -top-20 -right-20 w-80 h-80 bg-amber-300/30 rounded-full blur-3xl pointer-events-none" />
+  const [modal, setModal] = useState<{ group: Group; index: number } | null>(null);
 
-      <div className="relative z-10 max-w-[1200px] mx-auto">
-        <motion.div custom={0} variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center">
-          <div className="inline-block relative">
-            <span className="absolute inset-0 bg-amber-300 rotate-[-1deg] -skew-x-2 rounded-xs" />
-            <h2 className="relative text-3xl sm:text-4xl font-[900] tracking-wider px-4 py-1 font-['Permanent_Marker',cursive] uppercase">
-              More Projects
+  const prev = () => {
+    if (!modal) return;
+    setModal({ ...modal, index: (modal.index - 1 + modal.group.images.length) % modal.group.images.length });
+  };
+
+  const next = () => {
+    if (!modal) return;
+    setModal({ ...modal, index: (modal.index + 1) % modal.group.images.length });
+  };
+
+  return (
+    <section
+      id="projectssec3"
+      className="relative w-full bg-white text-slate-900 overflow-hidden font-['Plus_Jakarta_Sans',sans-serif] px-4 sm:px-8 lg:px-12 py-16 lg:py-20 scroll-mt-16"
+    >
+      {/* subtle dot texture */}
+      <div
+        className="absolute inset-0 opacity-[0.18] pointer-events-none"
+        style={{ backgroundImage: `radial-gradient(#94a3b8 1px, transparent 1px)`, backgroundSize: "22px 22px" }}
+      />
+
+      <div className="relative z-10 max-w-[1300px] mx-auto">
+        {/* Section Header */}
+        <motion.div
+          custom={0}
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mb-10 sm:mb-12"
+        >
+          <div className="flex items-center gap-3 mb-1">
+            <span className="w-3.5 h-3.5 rounded-full bg-[#1d63fe] shrink-0" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black italic tracking-wide text-[#0b1329] font-['Oswald',sans-serif] uppercase">
+              MAYA <span className="text-[#1d63fe]">3D MODELS</span>
             </h2>
           </div>
-          <p className="mt-4 max-w-2xl mx-auto text-slate-600 text-base sm:text-lg font-medium">
-            Websites, apps, designs and video content — a snapshot of my recent work.
+          <svg className="w-44 sm:w-64 h-3 text-[#1d63fe] mt-1" viewBox="0 0 240 12" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+            <path d="M4 6 C60 10, 160 10, 236 4" />
+          </svg>
+          <p className="mt-3 text-slate-500 text-sm sm:text-base font-medium max-w-xl">
+            3D modeling, texturing &amp; lighting projects built in Autodesk Maya. Click any card to view all renders.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {projects.map((p, idx) => (
+        {/* Grid — 3 per row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {groups.map((group, idx) => (
             <motion.div
-              key={p.title}
+              key={group.name}
               custom={idx}
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              whileHover={{ y: -8, rotate: idx % 2 === 0 ? -1 : 1 }}
-              transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="relative bg-white border-2 border-slate-900 rounded-2xl shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] p-6 flex flex-col group"
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 280, damping: 18 }}
+              onClick={() => setModal({ group, index: 0 })}
+              className="relative bg-white border-2 border-slate-900 rounded-2xl shadow-[5px_5px_0px_0px_rgba(15,23,42,1)] overflow-hidden cursor-pointer group"
             >
-              <TapeStrip className="absolute -top-3 -left-3 rotate-[-24deg]" />
+              {/* tape */}
+              <TapeStrip className={`absolute -top-2.5 ${idx % 2 === 0 ? "left-6 -rotate-[6deg]" : "right-6 rotate-[6deg]"} w-14 h-5 z-10`} />
 
-              {/* image thumbnail */}
-              <div
-                className="w-full h-40 rounded-xl border-2 border-slate-900 flex items-center justify-center relative overflow-hidden"
-                style={{ backgroundColor: p.bg, color: p.color }}
-              >
+              {/* image */}
+              <div className="relative h-52 sm:h-56 overflow-hidden">
                 <img
-                  src={p.img.src}
-                  alt={`${p.title} screenshot`}
-                  className="w-full h-full object-contain"
+                  src={group.images[0]}
+                  alt={group.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-2 right-3 text-xs font-black uppercase tracking-widest bg-white border-2 border-slate-900 px-2 py-0.5 rounded-full">
-                  {p.tag}
-                </span>
-                {/* doodle corner */}
-                <span className="absolute bottom-2 left-3 font-['Caveat',cursive] text-lg font-bold rotate-[-6deg]">
-                  {idx + 1}
-                </span>
+                {/* image count badge */}
+                {group.images.length > 1 && (
+                  <span className="absolute top-3 right-3 bg-[#1d63fe] text-white text-[10px] font-black px-2.5 py-1 rounded-full border border-white shadow">
+                    +{group.images.length} renders
+                  </span>
+                )}
               </div>
 
-              <h3 className="mt-4 text-lg font-black uppercase tracking-wide text-[#0b1329] font-['Oswald',sans-serif] leading-tight">
-                {p.title}
-              </h3>
-              <p className="mt-2 text-sm text-slate-600 leading-relaxed font-medium flex-1">{p.desc}</p>
-
-              <div className="mt-4 flex items-center justify-between">
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: p.color }} />
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#0b1329] group-hover:text-[#1d63fe] transition-colors"
-                >
-                  View Project
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
+              {/* card body */}
+              <div className="p-4 sm:p-5">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-lg sm:text-xl font-black italic uppercase text-[#0b1329] font-['Oswald',sans-serif] leading-tight">
+                    {group.name}
+                  </h3>
+                  <span className="shrink-0 w-8 h-8 rounded-full bg-[#0b1329] flex items-center justify-center group-hover:bg-[#1d63fe] transition-colors">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15M19.5 4.5H8.25M19.5 4.5v11.25" />
+                    </svg>
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {["Autodesk Maya", "3D Modeling", "Texturing"].map((tag) => (
+                    <span key={tag} className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-
-              <span className="absolute -bottom-2 -right-2 w-6 h-10 rounded-xs -z-10" style={{ backgroundColor: p.color }} />
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {modal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setModal(null)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.92 }}
+            transition={{ duration: 0.25 }}
+            className="relative w-full max-w-4xl bg-white border-2 border-slate-900 rounded-2xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* modal header */}
+            <div className="flex items-center justify-between px-5 py-3.5 border-b-2 border-slate-900 bg-[#f4f4f3]">
+              <h3 className="font-black italic uppercase text-[#0b1329] font-['Oswald',sans-serif] text-xl sm:text-2xl">
+                {modal.group.name}
+              </h3>
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-bold text-slate-500">
+                  {modal.index + 1} / {modal.group.images.length}
+                </span>
+                <button
+                  onClick={() => setModal(null)}
+                  className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-red-600 transition-colors"
+                >
+                  <X className="w-4 h-4 text-white" />
+                </button>
+              </div>
+            </div>
+
+            {/* main image */}
+            <div className="relative bg-[#0b1329] flex items-center justify-center" style={{ minHeight: 340 }}>
+              <img
+                key={modal.index}
+                src={modal.group.images[modal.index]}
+                alt={`${modal.group.name} render ${modal.index + 1}`}
+                className="max-h-[60vh] w-auto max-w-full object-contain"
+              />
+
+              {/* prev / next arrows */}
+              {modal.group.images.length > 1 && (
+                <>
+                  <button
+                    onClick={prev}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border-2 border-slate-900 flex items-center justify-center hover:bg-amber-300 transition-colors shadow"
+                  >
+                    <ChevronLeft className="w-5 h-5 text-slate-900" />
+                  </button>
+                  <button
+                    onClick={next}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 border-2 border-slate-900 flex items-center justify-center hover:bg-amber-300 transition-colors shadow"
+                  >
+                    <ChevronRight className="w-5 h-5 text-slate-900" />
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* thumbnail strip */}
+            {modal.group.images.length > 1 && (
+              <div className="flex gap-2 p-3 bg-[#f4f4f3] border-t-2 border-slate-900 overflow-x-auto">
+                {modal.group.images.map((src, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setModal({ ...modal, index: i })}
+                    className={`shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 transition-all ${
+                      i === modal.index ? "border-[#1d63fe] shadow-[3px_3px_0px_0px_rgba(29,99,254,1)]" : "border-slate-300 hover:border-slate-900"
+                    }`}
+                  >
+                    <img src={src} alt="" className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 }

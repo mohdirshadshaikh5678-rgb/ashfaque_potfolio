@@ -99,10 +99,10 @@ export default function ServicesSec1() {
           animate="visible"
           className="mt-4 max-w-2xl text-slate-700 text-base sm:text-lg leading-relaxed font-medium"
         >
-          From <span className="font-black text-[#0b1329]">full-stack web apps</span> to{" "}
-          <span className="font-black text-[#0b1329]">brand designs</span> and{" "}
-          <span className="font-black text-[#0b1329]">video content</span> — I help brands and
-          businesses build a strong, modern digital presence.
+          From <span className="font-black text-[#0b1329]">3D modeling</span> and{" "}
+          <span className="font-black text-[#0b1329]">texturing</span> to{" "}
+          <span className="font-black text-[#0b1329]">lighting & rendering</span> in Autodesk Maya — I create
+          realistic, production-ready 3D assets for your projects.
         </motion.p>
 
         {/* mini service chips */}
@@ -114,11 +114,12 @@ export default function ServicesSec1() {
           className="mt-8 flex flex-wrap justify-center gap-3"
         >
           {[
-            "Web Development",
-            "UI/UX Design",
-            "Video Editing",
-            "Graphic Design",
-            "AI Content",
+            "3D Modeling",
+            "Texturing",
+            "Lighting",
+            "Rendering",
+            "UV Mapping",
+            "Look Development",
           ].map((chip) => (
             <span
               key={chip}

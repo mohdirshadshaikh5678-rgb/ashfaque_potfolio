@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
+import { Menu, X, ArrowRight, Download, FileText } from "lucide-react";
+
+const RESUME_PDF = "/assest/pdfresume/Black and White Simple Infographic Resume_20261009_230638_0000.pdf";
 
 if (typeof document !== "undefined" && !document.getElementById("google-fonts-navbar")) {
   const link = document.createElement("link");
@@ -15,8 +17,8 @@ if (typeof document !== "undefined" && !document.getElementById("google-fonts-na
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  // { label: "About", href: "/about" },
+  // { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
@@ -30,6 +32,7 @@ const TapeStrip = ({ className = "" }) => (
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
@@ -43,6 +46,7 @@ export default function Navbar() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
+    <>
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -66,14 +70,14 @@ export default function Navbar() {
             <span className="font-mono text-[#fde047] font-black text-sm tracking-tight">&lt;/&gt;</span>
           </span>
 
-          <span className="relative flex flex-col leading-none">
-            <span className="text-[#0b1329] text-lg font-black tracking-tight font-['Oswald',sans-serif] uppercase">
-              Irshad<span className="text-[#1d63fe]">.Shaikh</span>
+            <span className="relative flex flex-col leading-none">
+              <span className="text-[#0b1329] text-lg font-black tracking-tight font-['Oswald',sans-serif] uppercase">
+                Ashfaque<span className="text-[#1d63fe]">.Shaikh</span>
+              </span>
+              <span className="font-['Caveat',cursive] text-[#1d63fe] text-sm font-bold rotate-[-3deg]">
+                3D animator
+              </span>
             </span>
-            <span className="font-['Caveat',cursive] text-[#1d63fe] text-sm font-bold rotate-[-3deg]">
-              web developer
-            </span>
-          </span>
 
           {/* Tape strip accent */}
           <TapeStrip className="absolute -top-2.5 -right-6 rotate-[20deg] opacity-70" />
@@ -120,18 +124,14 @@ export default function Navbar() {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="hidden lg:block"
         >
-          <a
-            href="/contact"
-            onClick={(e) => {
-              e.preventDefault();
-              router.push("/contact");
-            }}
+          <button
+            onClick={() => setResumeOpen(true)}
             className="group relative inline-flex items-center gap-2 bg-[#0b1329] hover:bg-[#1d63fe] text-white font-black text-sm uppercase tracking-wider px-6 py-3 rounded-full border-2 border-[#0b1329] shadow-[4px_4px_0px_0px_rgba(251,191,36,1)] transition-all duration-300 hover:shadow-[2px_2px_0px_0px_rgba(251,191,36,1)] hover:-translate-y-0.5 active:translate-y-0.5 select-none"
           >
-            <Sparkles className="w-4 h-4 text-amber-300" />
-            Hire Me
+            <FileText className="w-4 h-4 text-amber-300" />
+            Resume
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </button>
         </motion.div>
 
         {/* ============ MOBILE HAMBURGER ============ */}
@@ -193,24 +193,80 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
                 className="pt-3"
               >
-                <a
-                  href="/contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    router.push("/contact");
-                    setMenuOpen(false);
-                  }}
-                  className="flex items-center justify-center gap-2 bg-[#0b1329] text-white font-black text-sm uppercase tracking-wider px-6 py-3.5 rounded-full border-2 border-[#0b1329] shadow-[4px_4px_0px_0px_rgba(251,191,36,1)] active:translate-y-0.5 transition-transform"
+                <button
+                  onClick={() => { setResumeOpen(true); setMenuOpen(false); }}
+                  className="w-full flex items-center justify-center gap-2 bg-[#0b1329] text-white font-black text-sm uppercase tracking-wider px-6 py-3.5 rounded-full border-2 border-[#0b1329] shadow-[4px_4px_0px_0px_rgba(251,191,36,1)] active:translate-y-0.5 transition-transform"
                 >
-                  <Sparkles className="w-4 h-4 text-amber-300" />
-                  Hire Me
+                  <FileText className="w-4 h-4 text-amber-300" />
+                  Resume
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </button>
               </motion.li>
             </ul>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.header>
+
+      {/* ============ RESUME MODAL ============ */}
+      <AnimatePresence>
+        {resumeOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 backdrop-blur-sm p-4"
+            onClick={() => setResumeOpen(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.93, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.93, y: 24 }}
+              transition={{ duration: 0.25, ease: [0.215, 0.61, 0.355, 1] }}
+              className="relative w-full max-w-3xl bg-white border-2 border-slate-900 rounded-2xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] overflow-hidden flex flex-col"
+              style={{ maxHeight: "90vh" }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* modal header */}
+              <div className="flex items-center justify-between px-5 py-3.5 border-b-2 border-slate-900 bg-[#f4f4f3] shrink-0">
+                <div className="flex items-center gap-2.5">
+                  <FileText className="w-5 h-5 text-[#1d63fe]" />
+                  <h3 className="font-black italic uppercase text-[#0b1329] font-['Oswald',sans-serif] text-lg sm:text-xl tracking-wide">
+                    Resume
+                  </h3>
+                </div>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={RESUME_PDF}
+                    download="Ashfaque_Shaikh_Resume.pdf"
+                    className="inline-flex items-center gap-1.5 bg-[#1d63fe] hover:bg-[#0b1329] text-white font-black text-xs uppercase tracking-wider px-4 py-2 rounded-full border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] transition-all hover:-translate-y-0.5 active:translate-y-0.5"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    Download
+                  </a>
+                  <button
+                    onClick={() => setResumeOpen(false)}
+                    className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center hover:bg-red-600 transition-colors"
+                  >
+                    <X className="w-4 h-4 text-white" />
+                  </button>
+                </div>
+              </div>
+
+              {/* PDF iframe */}
+              <div className="flex-1 overflow-hidden" style={{ minHeight: 0 }}>
+                <iframe
+                  src={`${RESUME_PDF}#toolbar=0&navpanes=0`}
+                  className="w-full h-full"
+                  style={{ minHeight: "70vh" }}
+                  title="Resume"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }

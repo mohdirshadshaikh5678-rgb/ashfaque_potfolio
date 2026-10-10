@@ -91,8 +91,8 @@ export default function ProjectsSec1() {
           animate="visible"
           className="mt-4 max-w-2xl text-slate-700 text-base sm:text-lg leading-relaxed font-medium"
         >
-          Real projects, real clients — from full-stack web apps to brand identities and video
-          content. Here&apos;s a selection of my favourite work so far.
+          Real 3D projects — from product models and props to environments, with detailed texturing,
+          lighting & rendering in Autodesk Maya. Here&apos;s a selection of my work.
         </motion.p>
 
         {/* stats row */}

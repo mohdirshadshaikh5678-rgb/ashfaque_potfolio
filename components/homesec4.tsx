@@ -583,12 +583,12 @@ export default function HomeSec4() {
       textColor: "text-white",
       accentColor: "#2e1052",
       buttonBg: "bg-white hover:bg-slate-100 text-[#2e1052]",
-      title: <>TEKNODE<br />E-COMMERCE<br />PLATFORM</>,
-      subtitle: "A complete online store for Teknode, built with modern web technologies.",
-      cta: "VISIT WEBSITE",
-      link: "https://deep.vibgyorventures.co.in/",
-      graphic: cardGraphic(img01, "Teknode e-commerce website"),
-      checklist: ["Product Catalog", "Payment Integration", "Order Management", "Fast & Secure"],
+      title: <>PRODUCT<br />VISUALIZATION<br />MODEL</>,
+      subtitle: "High-fidelity product model with accurate materials and clean topology.",
+      cta: "VIEW PROJECT",
+      link: "#",
+      graphic: cardGraphic(img01, "3D product visualization model"),
+      checklist: ["Hard-Surface Modeling", "UV Mapping", "Texturing", "Photoreal Render"],
     },
     // 2. Cyan/Blue Card - Vibgyor Ventures
     {
@@ -597,12 +597,12 @@ export default function HomeSec4() {
       textColor: "text-white",
       accentColor: "#0284c7",
       buttonBg: "bg-white hover:bg-slate-100 text-[#0284c7]",
-      title: <>VIBGYOR<br />VENTURES<br />CORPORATE</>,
-      subtitle: "Official corporate website for Vibgyor Ventures with premium branding.",
-      cta: "VISIT WEBSITE",
-      link: "https://vibgyorventures.co.in/home",
-      graphic: cardGraphic(img02, "Vibgyor Ventures website"),
-      checklist: ["Company Branding", "Service Showcase", "SEO Friendly", "Mobile Responsive"],
+      title: <>PROPS &<br />ASSETS<br />COLLECTION</>,
+      subtitle: "Game-ready and presentation props modeled, textured & lit in Autodesk Maya.",
+      cta: "VIEW PROJECT",
+      link: "#",
+      graphic: cardGraphic(img02, "3D props and assets"),
+      checklist: ["Low/High Poly", "Clean Topology", "Shading", "Optimized Assets"],
     },
     // 3. Center Red Card - Inner Compass Web App
     {
@@ -611,12 +611,12 @@ export default function HomeSec4() {
       textColor: "text-white",
       accentColor: "#b21212",
       buttonBg: "bg-white hover:bg-slate-100 text-[#b21212]",
-      title: <><span className="text-white">INNER</span><br /><span className="text-[#0c1838]">COMPASS</span><br /><span className="text-[#0c1838]">WEB APP</span></>,
-      subtitle: "A modern live web application with a clean, fast and responsive frontend.",
-      cta: "VISIT WEBSITE",
-      link: "https://innercompasslive.vercel.app/",
-      graphic: cardGraphic(img04, "Inner Compass web app"),
-      checklist: ["Modern Frontend", "Responsive UI", "Fast Loading", "User Friendly"],
+      title: <><span className="text-white">INTERIOR</span><br /><span className="text-[#0c1838]">SCENE</span><br /><span className="text-[#0c1838]">RENDER</span></>,
+      subtitle: "Architectural interior scene with realistic lighting, materials and composition.",
+      cta: "VIEW PROJECT",
+      link: "#",
+      graphic: cardGraphic(img04, "3D interior scene render"),
+      checklist: ["Scene Modeling", "Lighting", "Materials", "Final Render"],
     },
     // 4. Yellow Card - Horizon Industrial Parks
     {
@@ -625,12 +625,12 @@ export default function HomeSec4() {
       textColor: "text-[#0c1838]",
       accentColor: "#f19d00",
       buttonBg: "bg-white hover:bg-slate-100 text-[#0c1838]",
-      title: <>HORIZON<br />INDUSTRIAL<br />PARKS</>,
-      subtitle: "Corporate platform for India&apos;s largest industrial & logistics park developer.",
-      cta: "VISIT WEBSITE",
-      link: "https://www.hiparks.com/",
-      graphic: cardGraphic(img05, "Horizon Industrial Parks website"),
-      checklist: ["Professional Branding", "Portfolio Showcase", "Lead Capture", "Trust Building"],
+      title: <>ENVIRONMENT<br />DESIGN<br />ASSET</>,
+      subtitle: "Stylized/realistic environment built with cinematic lighting and detailed assets.",
+      cta: "VIEW PROJECT",
+      link: "#",
+      graphic: cardGraphic(img05, "3D environment design"),
+      checklist: ["Blockout", "Texturing", "Lighting", "Look Development"],
     },
   ];
 
@@ -676,7 +676,7 @@ export default function HomeSec4() {
             <path d="M4 6 C60 10, 160 10, 236 4" />
           </svg>
           <p className="mt-3 font-['Caveat',cursive] text-white text-2xl font-bold rotate-[-1deg]">
-            real projects I&apos;ve designed, coded & shipped
+            real 3D projects I&apos;ve modeled, textured, lit & rendered
           </p>
         </div>
 
@@ -700,9 +700,9 @@ export default function HomeSec4() {
           {...floatAnim(5.2, 6, -2)}
           className="absolute -top-8 right-2 sm:right-8 z-30 hidden lg:flex flex-col items-end font-['Caveat',cursive] text-white text-3xl font-extrabold leading-none rotate-[8deg] pointer-events-none text-right drop-shadow-md"
         >
-          <p>Better</p>
-          <p className="pr-3">Web <span className="text-2xl opacity-90">≡</span></p>
-          <p className="pr-6 underline decoration-white/80 decoration-2">Solutions</p>
+            <p>Realistic</p>
+          <p className="pr-3">3D <span className="text-2xl opacity-90">≡</span></p>
+          <p className="pr-6 underline decoration-white/80 decoration-2">Assets</p>
           <div className="absolute -left-6 top-1 text-2xl">✦</div>
         </motion.div>
 
@@ -727,8 +727,8 @@ export default function HomeSec4() {
           <div className="mb-1 mr-12">
             <BottomRightArrowSVG />
           </div>
-          <p>Clean Code <span className="text-2xl opacity-90">{"///"}</span></p>
-          <p className="pr-4 underline decoration-white/80 decoration-2">Great Results</p>
+            <p>Clean Mesh <span className="text-2xl opacity-90">{"///"}</span></p>
+          <p className="pr-4 underline decoration-white/80 decoration-2">Great Renders</p>
         </motion.div>
 
         {/* ================= 5-CARDS CAROUSEL ================= */}

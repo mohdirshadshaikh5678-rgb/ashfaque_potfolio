@@ -95,7 +95,7 @@ export default function AboutSec1() {
           animate="visible"
           className="mt-8 font-['Caveat',cursive] text-[#1d63fe] text-2xl sm:text-3xl font-bold rotate-[-2deg]"
         >
-          Hi, I&apos;m Irshad — let me show you who I am
+          Hi, I&apos;m Ashfaque Shaikh — let me show you who I am
         </motion.p>
 
         <motion.p
@@ -105,10 +105,8 @@ export default function AboutSec1() {
           animate="visible"
           className="mt-4 max-w-2xl text-slate-700 text-base sm:text-lg leading-relaxed font-medium"
         >
-          A passionate <span className="font-black text-[#0b1329]">Full-Stack Web Developer</span>,{" "}
-          <span className="font-black text-[#0b1329]">Graphic Designer</span> and{" "}
-          <span className="font-black text-[#0b1329]">Video Editor</span> who turns big ideas into
-          beautiful, fast and functional digital experiences.
+          I&apos;m a skilled 3D Animator specializing in 3D Modeling, Texturing, Lighting, and Rendering using Autodesk Maya. 
+          I create realistic, production-ready 3D assets, props, and scenes with clean topology, accurate materials, and cinematic lighting.
         </motion.p>
 
         {/* Stats row */}
@@ -123,7 +121,7 @@ export default function AboutSec1() {
             { value: "2+", label: "Years" },
             { value: "20+", label: "Projects" },
             { value: "15+", label: "Happy Clients" },
-            { value: "10+", label: "Tech Skills" },
+            { value: "10+", label: "3D Skills" },
           ].map((s) => (
             <motion.div
               key={s.label}
