@@ -23,8 +23,8 @@ if (typeof document !== "undefined" && !document.getElementById("google-fonts-fo
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About Me", href: "/about" },
-  { label: "Services", href: "/services" },
+  // { label: "About Me", href: "/about" },
+  // { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
@@ -59,9 +59,9 @@ const InstagramIcon = ({ className = "" }) => (
 );
 
 const socials = [
-  { label: "GitHub", href: "https://github.com", icon: GithubIcon },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: LinkedinIcon },
-  { label: "Instagram", href: "https://instagram.com", icon: InstagramIcon },
+  // { label: "GitHub", href: "https://github.com", icon: GithubIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/ashfaque-ali-shaikh-80a8942a1?utm_source=share_via&utm_content=profile&utm_medium=member_android", icon: LinkedinIcon },
+  { label: "Instagram", href: "https://www.instagram.com/ashfaque_creater?obrf=YWp6eXJtOGt2dDdw", icon: InstagramIcon },
   { label: "Email", href: "mailto:ashfaquealishaikh7890@gmail.com", icon: Mail },
 ];
 
@@ -171,7 +171,7 @@ export default function Footer() {
           >
             <Link href="/" onClick={() => goTo("/")} className="relative inline-flex items-center gap-3 select-none group">
               <span className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-white border-2 border-white shadow-[3px_3px_0px_0px_rgba(251,191,36,1)]">
-                <span className="font-mono text-[#0b1329] font-black text-base tracking-tight">&lt;/&gt;</span>
+                <span className="font-mono text-[#0b1329] font-black text-base tracking-tight">3D</span>
               </span>
               <span className="flex flex-col leading-none">
                 <span className="text-white text-2xl font-black tracking-tight font-['Oswald',sans-serif] uppercase">
@@ -181,7 +181,7 @@ export default function Footer() {
                   3D modeling 
                 </span>
               </span>
-              <TapeStrip className="absolute -top-3 -right-2 rotate-[24deg] opacity-60" />
+              {/* <TapeStrip className="absolute -top-3 -right-2 rotate-[24deg] opacity-60" /> */}
             </Link>
 
             <p className="mt-5 text-sm leading-relaxed text-slate-400 max-w-sm">
