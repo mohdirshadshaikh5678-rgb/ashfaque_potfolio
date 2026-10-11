@@ -76,7 +76,7 @@ export default function ShowreelSec() {
         >
           <span className="w-3.5 h-3.5 rounded-full bg-[#1d63fe] shrink-0" />
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black italic tracking-wide text-white font-['Oswald',sans-serif] uppercase">
-            SHOWREEL <span className="text-[#1d63fe]">2024</span>
+            3D  <span className="text-[#1d63fe]">SHOWREEL</span>
           </h2>
         </motion.div>
         <p className="mt-2 ml-6 text-slate-400 text-sm sm:text-base font-medium">
@@ -85,7 +85,7 @@ export default function ShowreelSec() {
       </div>
 
       {/* video wrapper — full width */}
-      <div className="relative z-10 w-full group">
+      <div className="relative z-10 w-full h-screen group">
         <video
           ref={videoRef}
           src={VIDEO_SRC}

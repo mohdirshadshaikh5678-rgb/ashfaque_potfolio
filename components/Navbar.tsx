@@ -67,8 +67,8 @@ export default function Navbar() {
           {/* Marker highlight box behind logo */}
           <span className="absolute -inset-x-2 -inset-y-1 bg-amber-300 -rotate-1 transform -skew-x-2 rounded-[4px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-          <span className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#0b1329] border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)]">
-            <span className="font-mono text-[#fde047] font-black text-sm tracking-tight">3D</span>
+          <span className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[#0b1329] border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(59,130,246,1)]">
+            <span className="font-mono text-white font-black text-sm tracking-tight text-[20px] ">3D</span>
           </span>
 
             <span className="relative flex flex-col leading-none">
@@ -139,7 +139,7 @@ export default function Navbar() {
         <button
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
-          className="lg:hidden relative w-11 h-11 rounded-xl bg-[#0b1329] text-white border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] flex items-center justify-center active:translate-y-0.5 transition-transform"
+          className="lg:hidden relative w-11 h-11 rounded-xl bg-[#0b1329] text-white border-2 border-slate-900 shadow-[3px_3px_0px_0px_rgba(59,130,246,1)] flex items-center justify-center active:translate-y-0.5 transition-transform"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.span

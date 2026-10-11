@@ -958,7 +958,7 @@ export function HomeSec1() {
       <div className="relative z-10 max-w-[1400px] mx-auto w-full flex flex-col justify-between flex-grow">
 
         {/* TITLE */}
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -967,13 +967,7 @@ export function HomeSec1() {
           <h1 className="text-[14vw] sm:text-[13vw] lg:text-[10.5rem] leading-[0.85] font-black tracking-tighter text-[#0b1329] font-['Oswald',sans-serif] uppercase flex justify-center items-center flex-wrap gap-x-2 sm:gap-x-6">
             <span className="relative inline-block">
               3D
-              {/* <motion.div 
-                {...floatAnim(5, 6)}
-                className="absolute -top-3 -right-2 sm:-top-6 sm:-right-6 bg-white border-2 border-slate-900 rounded-md p-1 sm:p-1.5 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] rotate-[-12deg] z-20"
-              >
-                <TapeStrip className="absolute -top-3 left-1/2 -translate-x-1/2 rotate-[-6deg] w-10 sm:w-12 h-4 sm:h-5" />
-                <span className="font-mono text-xs sm:text-base font-bold text-slate-900">MAYA</span>
-              </motion.div> */}
+              
             </span>
 
             <span className="relative inline-block">
@@ -993,7 +987,36 @@ export function HomeSec1() {
           <div className="absolute top-2 right-[5%] hidden md:block rotate-[22deg]">
             <TapeStrip className="w-24 h-8" />
           </div>
-        </motion.div>
+        </motion.div> */}
+        <motion.div 
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="relative text-center w-full select-none mt-2 z-10"
+  >
+    <h1 className="text-[14vw] sm:text-[13vw] lg:text-[10.5rem] leading-[0.85] font-black tracking-tighter text-white font-['Oswald',sans-serif] uppercase flex justify-center items-center flex-wrap gap-x-2 sm:gap-x-6 [text-shadow:_2px_2px_0px_#7c3aed,_0_6px_15px_rgba(0,0,0,0.9)] sm:[text-shadow:_3px_3px_0px_#7c3aed,_6px_6px_0px_#5b21b6,_0_10px_25px_rgba(0,0,0,0.9)]">
+      <span className="relative inline-block">
+        3D
+      </span>
+
+      <span className="relative inline-block">
+        MOD
+        <span className="relative inline-block"></span>
+        ELI
+        <span className="relative inline-block">
+          N
+          <span className="absolute -top-1 -right-1 pointer-events-none">
+            {/* <SpiderWebSvg /> */}
+          </span>
+        </span>
+        G
+      </span>
+    </h1>
+
+    <div className="absolute top-2 right-[5%] hidden md:block rotate-[22deg]">
+      <TapeStrip className="w-24 h-8" />
+    </div>
+  </motion.div>
 
         {/* Connecting Wire (Desktop Only) */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 hidden lg:block" viewBox="0 0 1000 600" fill="none">

@@ -685,14 +685,14 @@ const MayaLogoIcon = () => (
 );
 
 const SubstanceLogoIcon = () => (
-  <span className="text-amber-500 font-black text-base sm:text-lg font-mono tracking-tighter select-none">
+  <span className="text-red-500 font-black text-base sm:text-lg font-mono tracking-tighter select-none">
     SUB
   </span>
 );
 
 const ZBrushLogoIcon = () => (
-  <span className="text-red-500 font-black text-lg sm:text-xl font-mono tracking-tighter select-none">
-    ZBR
+  <span className="text-blue-500 font-black text-lg sm:text-xl font-mono tracking-tighter select-none">
+    AE
   </span>
 );
 
@@ -718,8 +718,8 @@ export function HomeSec2() {
   const techStack = [
     { name: 'Autodesk Maya', icon: <MayaLogoIcon /> },
     { name: 'Substance Painter', icon: <SubstanceLogoIcon /> },
-    { name: 'ZBrush', icon: <ZBrushLogoIcon /> },
-    { name: 'Blender', icon: <BlenderLogoIcon /> },
+    { name: 'AFTER EFFECT', icon: <ZBrushLogoIcon /> },
+    // { name: 'Blender', icon: <BlenderLogoIcon /> },
     { name: 'Arnold Render', icon: <ArnoldLogoIcon /> },
     { name: 'Photoshop', icon: <PhotoshopLogoIcon /> },
   ];
@@ -871,14 +871,14 @@ export function HomeSec2() {
           </motion.div>
 
           {/* Bottom Right Handwritten Doodle */}
-          <div className="relative sm:absolute sm:bottom-0 sm:right-4 mt-8 sm:mt-0 flex items-center gap-2 self-start sm:self-end pointer-events-none">
+          {/* <div className="relative sm:absolute sm:bottom-0 sm:right-4 mt-8 sm:mt-0 flex items-center gap-2 self-start sm:self-end pointer-events-none">
             <CurvedArrowBottomRight />
             <div className="font-['Caveat',cursive] text-slate-800 text-lg sm:text-xl font-bold leading-none rotate-[-4deg]">
               <p>Model</p>
               <p className="pl-2">Render</p>
               <p className="pl-4 underline decoration-slate-800">Animate</p>
             </div>
-          </div>
+          </div> */}
 
         </div>
 

@@ -348,9 +348,11 @@ const groups: Group[] = [
   {
     name: "Ice Cream Cart",
     images: [
-      "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinti_1.webp",
-      "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinti_2.webp",
-      "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprintin(.webp",
+        "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprintin(.webp",
+        "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinti_1.webp",
+        "/assest/mayaimg/Ice Cream Cart 3D Modeling In Autodesk Maya. _. _. _. _. __3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinti_2.webp",
+    
+      
     ],
   },
   {
@@ -387,6 +389,36 @@ const groups: Group[] = [
       "/assest/mayaimg/Sword 3D Modeling In Autodesk Maya. _. _. _. _. _3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _zbrush (.webp",
       "/assest/mayaimg/Sword 3D Modeling In Autodesk Maya. _. _. _. _. _3dmodeling _3dmodel _3dart _3d _3dartist _3drender _3ddesign _blender3d _blender _b3d _3dprinting _zbrush_2.webp",
     ],
+  },
+    {
+    name: "Artistroom",
+    images: [
+      "/assest/mayaimg/artistroomf(2).jpeg",
+      "/assest/mayaimg/artistroomao(3).jpeg",
+      "/assest/mayaimg/artistroomw (1).jpeg",
+
+    ],
+    
+  },
+     {
+    name: "CAR GARAGE",
+    images: [
+      "/assest/mayaimg/car final image.png",
+      "/assest/mayaimg/Car ao.png",
+
+    ],
+    
+  },
+      {
+    name: "LIVING ROOM",
+    images: [
+      "/assest/mayaimg/IMG-20230911-WA0000.jpg.jpeg",
+      "/assest/mayaimg/Interior Room 3D Modeling In Autodesk Maya ___shorts _tech _animation _3dtotalanimation _3d _3danimation _3dmodeling _instareels _viral _techreels _reels(_1.webp",
+      "/assest/mayaimg/Interior Room 3D Modeling In Autodesk Maya ___shorts _tech _animation _3dtotalanimation _3d _3danimation _3dmodeling _instareels _viral _techreels _reels(_2.webp",
+
+
+    ],
+    
   },
 ];
 

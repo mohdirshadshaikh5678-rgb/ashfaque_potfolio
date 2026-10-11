@@ -903,7 +903,7 @@ export function HomeSec3() {
       desc: [
         "Created detailed 3D hard-surface and organic models optimized for animation and clean topology.",
         "Applied accurate UV mapping, custom materials, and photorealistic textures in Autodesk Maya & Substance Painter.",
-        "Designed cinematic lighting setups and rendered production-ready assets and animation scenes.",
+        "I have 1 year of experience working at a company in 3D Modeling, Texturing, and Lighting using Autodesk Maya. I have also worked on project management and contributed to projects for a YouTube channel, gaining practical experience in 3D production and project coordination.",
       ],
     },
   ];
@@ -956,9 +956,9 @@ export function HomeSec3() {
                   className="relative flex flex-col sm:flex-row items-start gap-3 sm:gap-4 bg-white border-2 border-slate-900 rounded-2xl p-4 sm:p-5 shadow-[5px_5px_0px_0px_rgba(15,23,42,1)]"
                 >
                   {/* Logo Slot */}
-                  <div className="w-14 h-14 sm:w-20 sm:h-20 shrink-0 rounded-xl border-2 border-slate-900 overflow-hidden bg-[#f0f6fd] flex items-center justify-center p-1.5">
+                  <div className="w-14 h-14 sm:w-20 sm:h-20 shrink-0 bg-black rounded-xl border-2 border-slate-900 overflow-hidden bg-[#f0f6fd] flex items-center justify-center p-1.5">
                     <div className="w-full h-full flex items-center justify-center font-black text-xs sm:text-sm text-center text-[#0d1b3e] uppercase leading-tight">
-                      SUNITA<br/>PROD
+                    <img src="https://sunitaproductions.com/img/logo_f.png" alt="" />
                     </div>
                   </div>
 

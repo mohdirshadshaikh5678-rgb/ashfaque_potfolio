@@ -2106,7 +2106,7 @@ export default function AiEditPage() {
               AI-generated videos, motion design experiments, and creative shorts — created using cutting-edge AI tools like Grok AI and Flow, then professionally edited and enhanced in Adobe After Effects. Every video showcased here is crafted using a blend of AI creativity, motion design, and post-production.
             </p>
             <div className="flex gap-6 shrink-0 absolute lg:top-0 lg:right-5 -top-25 right-1 ">
-              {[["8", "Videos"], ["AI", "Powered"], ["HD", "Quality"]].map(([val, lbl]) => (
+              {[["18", "Videos"], ["AI", "Powered"], ["HD", "Quality"]].map(([val, lbl]) => (
                 <div key={lbl} className="text-center">
                   <p className="text-2xl sm:text-6xl font-black text-violet-400 font-['Oswald',sans-serif]">{val}</p>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">{lbl}</p>
