@@ -288,7 +288,7 @@ export default function Footer() {
                   <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-amber-300 group-hover:text-[#0b1329] transition-colors">
                     <Mail className="w-4 h-4" />
                   </span>
-                  ashfaque.shaikh.dev@gmail.com
+                  ashfaquealishaikh7890@gmail.com
                 </a>
               </li>
               <li>
